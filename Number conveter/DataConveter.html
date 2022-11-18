@@ -1,0 +1,141 @@
+<HTML>
+<HEAD>
+<TITLE>Number System</TITLE>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scal=1.0">
+<link rel="icon" href="./fav-icon/git_i.png">
+</HEAD>
+<STYLE>
+body{
+    padding: 0%;
+    margin: 0%;
+    background: #f6f6f6;
+    font-family: 'Times New Roman', Times, serif;
+}
+.container{
+    background: #0842ff;
+    width: 55%;
+    height: auto;
+    border: 2px solid #0873ff;
+    border-radius: 5px;
+    margin: 5% calc(45%/2);
+    align-items: center;
+}
+.header{
+    color: #fff;
+    font-weight: bold;
+    font-size: 25px;
+    text-align: center;
+    text-transform: uppercase;
+}
+.operator{
+    margin: 2% 0%;
+    height: auto;
+    text-align: center;
+}
+.btnOp,.btnSend{
+    width: 80px;
+    height: 5%;
+    color: #fff;
+    background: #0873ff;
+    border-radius: 5px;
+    border: 1px solid #0873ff;
+    cursor: pointer;
+}
+.btnOp:hover,.btnSend:hover{
+    background: #fff;
+    color: #0873ff;
+    border: 2px solid #0873ff;
+    box-shadow: 0 0 2px 3px #5fa1f8;
+    font-weight: bold;
+}
+
+#binSpace,#decSpace,#octSpace,#hexSpace,#ansSpace{
+    margin-left: 5%;
+    color: #fff;
+    display: none;
+}
+.queMassege,#decMassege,#octMassege,#hexMassege,#ansMassege{
+    width: 80%;
+    height: 32px;
+    outline: none;
+    max-width: 90%;
+    max-height: 50px;
+    color: #0873ff;
+    border: 1px solid #5fa1f8;
+    border-radius: 5px;
+}
+.btnSend{
+    margin: 2% 0%;
+    text-align: center;
+    cursor: pointer;
+}
+.copybtn{
+    width: 50px;
+    height: 3%;
+    color: #fff;
+    background: #0873ff;
+    border-radius: 2px;
+    border: 1px solid #0873ff;
+    text-align: center;
+    margin: 2% 2%;
+}
+.copybtn:hover{
+    background: #fff;
+    color: #0873ff;
+    border: 2px solid #0873ff;
+    box-shadow: 0 0 1px 2px #5fa1f8;
+    font-weight: bold;
+}
+.light{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#binans,#decans,#octans,#hexans{
+    text-transform: uppercase;
+}
+</STYLE>
+<BODY>
+    <div class="container">
+        <div class="header">console box</div>
+        <div id="workspace">
+            <div class="operator">
+                <button id="binbtn" class="btnOp" onclick="binShift();">BIN</button>
+                <button id="decbtn" class="btnOp" onclick="decShift();">DEC</button>
+                <button id="octbtn" class="btnOp" onclick="octShift();">OCT</button>
+                <button id="hexbtn" class="btnOp" onclick="hexShift();">HEX</button>
+            </div>
+            <div id="binSpace">
+                <h4>Enter your Binary number here: </h4>
+                <textarea class="queMassege"id="queMassegea" rows="2" placeholder="Try to write simple number!"title="demo: 100101"></textarea><br>
+                <button class="btnSend" onclick="binValue();">Send</button>
+            </div>
+            <div id="decSpace">
+                <h4>Enter your Decimal number here: </h4>
+                <textarea class="queMassege"id="queMassegeb" rows="2" placeholder="Try to write simple number!"title="demo: 1234"></textarea><br>
+                <button class="btnSend" onclick="binValue();">Send</button>
+            </div>
+            <div id="octSpace">
+                <h4>Enter your Octal number here: </h4>
+                <textarea class="queMassege"id="queMassegec" rows="2" placeholder="Try to write simple number!"title="demo: 5"></textarea><br>
+                <button class="btnSend" onclick="binValue();">Send</button>
+            </div>
+            <div id="hexSpace">
+                <h4>Enter your Hexa-Decimal number here: </h4>
+                <textarea class="queMassege"id="queMasseged" rows="2" placeholder="Try to write simple number!"title="demo: 2AF"></textarea><br>
+                <button class="btnSend" onclick="binValue();">Send</button>
+            </div>
+            <div id="ansSpace">
+                <div class="light"><h4>Your Converted data here: </h4><button class="copybtn" onclick="copyTxt();" title="copy your ans for future use">Copy</button></div>
+                <span class="light"id="binans"><span class="subhead">BIN: </span><span id="binansbox"></span></span>
+                <span class="light"id="decans"><span class="subhead">DEC: </span><span id="decansbox"></span></span>
+                <span class="light"id="octans"><span class="subhead">OCT: </span><span id="octansbox"></span></span>
+                <span class="light"id="hexans"><span class="subhead">HEX: </span><span id="hexansbox"></span></span>
+            </div><br>
+        </div>
+    </div>
+</BODY>
+<SCRIPT src="./hex.js">
+</SCRIPT>
+</HTML>
