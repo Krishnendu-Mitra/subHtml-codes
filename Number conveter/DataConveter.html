@@ -1,6 +1,6 @@
 <HTML>
 <HEAD>
-<TITLE>Number System</TITLE>
+<TITLE version="2">Number System</TITLE>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scal=1.0">
 <link rel="icon" href="./fav-icon/git_i.png">
@@ -41,6 +41,7 @@ body{
     border-radius: 5px;
     border: 1px solid #0873ff;
     cursor: pointer;
+    margin-top: 5px;
 }
 .btnOp:hover,.btnSend:hover{
     background: #fff;
@@ -55,7 +56,7 @@ body{
     color: #fff;
     display: none;
 }
-.queMassege,#decMassege,#octMassege,#hexMassege,#ansMassege{
+.queMassege{
     width: 80%;
     height: 32px;
     outline: none;
@@ -109,22 +110,22 @@ body{
             <div id="binSpace">
                 <h4>Enter your Binary number here: </h4>
                 <textarea class="queMassege"id="queMassegea" rows="2" placeholder="Try to write simple number!"title="demo: 100101"></textarea><br>
-                <button class="btnSend" onclick="binValue();">Send</button>
+                <button class="btnSend" onclick="conValue();">Send</button>
             </div>
             <div id="decSpace">
                 <h4>Enter your Decimal number here: </h4>
                 <textarea class="queMassege"id="queMassegeb" rows="2" placeholder="Try to write simple number!"title="demo: 1234"></textarea><br>
-                <button class="btnSend" onclick="binValue();">Send</button>
+                <button class="btnSend" onclick="conValue();">Send</button>
             </div>
             <div id="octSpace">
                 <h4>Enter your Octal number here: </h4>
-                <textarea class="queMassege"id="queMassegec" rows="2" placeholder="Try to write simple number!"title="demo: 5"></textarea><br>
-                <button class="btnSend" onclick="binValue();">Send</button>
+                <textarea class="queMassege"id="queMassegec" rows="2" placeholder="Try to write simple number!"title="demo: 212"></textarea><br>
+                <button class="btnSend" onclick="conValue();">Send</button>
             </div>
             <div id="hexSpace">
                 <h4>Enter your Hexa-Decimal number here: </h4>
                 <textarea class="queMassege"id="queMasseged" rows="2" placeholder="Try to write simple number!"title="demo: 2AF"></textarea><br>
-                <button class="btnSend" onclick="binValue();">Send</button>
+                <button class="btnSend" onclick="conValue();">Send</button>
             </div>
             <div id="ansSpace">
                 <div class="light"><h4>Your Converted data here: </h4><button class="copybtn" onclick="copyTxt();" title="copy your ans for future use">Copy</button></div>
