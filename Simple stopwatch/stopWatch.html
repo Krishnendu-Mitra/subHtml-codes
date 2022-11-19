@@ -1,0 +1,158 @@
+<html>
+	<head>
+		<title>Simple Timer</title>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://avatars.githubusercontent.com/u/111632830?v=4">
+	</head>
+<style>
+*{
+	width: 100%;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+  margin: 0px;
+  padding: 0px;
+  background: #f6f6f6;
+  font-family: 'poppins', sans-serif;
+}
+html{
+  font-family: defult;
+  font-size: 100%;
+  scroll-behavior: smooth;
+}
+h2{
+  color:#0873ff;
+}
+.main{
+ 	height: 100%;
+  width: 100%;
+  background: #fff;
+  text-align: center;
+}
+.box-holder{
+  height: 300px;
+  width: 80%;
+  margin-top: 20%;
+  margin-left: 10%;
+  background: #fff;
+  box-shadow: 0px 0px 4px 2px #646464;
+}
+.holder{
+ 	display: flex;
+  flex-direction: row;
+}
+.box{
+ 	height: 50px;
+  width: 25%;
+  background: #0842ff;
+  color: #fff;
+  margin-top: 50px;
+  margin-left: calc(25% / 4);
+  font-size: 40px;
+  font-weight: bold;
+}
+.btn-holder{
+	width: 60%;
+	height: 200px;
+	margin: 20px 20%;
+}
+.btn{
+	height: 30px;
+	margin: 20px 0px;
+	background: #0842ff;
+	color: #fff;
+	outline: none;
+	border: 2px solid #0873ff;
+	border-radius: 5px;
+	font-weight: bold;
+	font-size: 16px;
+}
+.btn:hover{
+	color: #0842ff;
+	background: #fff;
+	border: 3px solid #0873ff;
+}
+</style>
+<body>
+	<div class="main">
+		<h2>Simple Stop Watch</h2>
+		<div class="box-holder">
+		   <div class="holder">
+			 <div class="box"><span id="boxA">00</span></div>
+			 <div class="box"><span id="boxB">00</span></div>
+			 <div class="box"><span id="boxC">00</span></div>
+			</div>
+			<div class="btn-holder">
+				<button class="btn" id="btnA" onclick="restart();">Restart</button>
+				<button class="btn" id="btnB" onclick="pause();">Pause</button>
+			</div>
+		</div>
+	</div>
+</body>
+<script>
+	boxA = document.getElementById("boxA");
+	boxB = document.getElementById("boxB");
+	boxC = document.getElementById("boxC");
+	var i = 1, j = 0, k = 0, c=0;
+  setInterval (function second(){
+       if(i == 60){
+       	i = 0;
+           j++;
+           if(j<=9){
+            boxB.innerHTML = "0"+j;
+          }else if(j == 60){
+          	j = 0;
+             k++;
+             if(k == 60){
+            	k = 0;
+            }else{
+           	if(k <= 9){
+                  boxA.innerHTML = "0"+k;
+               }else{
+                 boxA.innerHTML = k;
+               }
+            }
+          }else{
+            boxB.innerHTML = j;
+          }
+       }else{
+       	if(i <= 9){
+            boxC.innerHTML = "0"+i;
+          }else if(i == 100){
+          	boxC.innerHTML = i/0;
+          }else{
+            boxC.innerHTML = i;
+          }
+         i++;
+       }
+     }, 1000);
+     
+     setInterval (function hours(){
+     // console.log("hh");
+       if(k == 60){
+       	k = 0;
+       }else{
+       	if(k <= 9){
+            boxA.innerHTML = "0"+k;
+          }else{
+            boxA.innerHTML = k;
+          }
+         k++;
+       }
+     }, 1000000);
+     
+   function restart(){
+   	i = 1;
+       j = 0;
+       boxB.innerHTML = "0"+j;
+       k = 0;
+       boxA.innerHTML = "0"+k;
+   }
+   function pause(){
+   	alert("Time Value is = "+k+":"+j+":"+i+" please note it");
+        i = "NaN";
+   }
+</script>
+</html>
