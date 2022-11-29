@@ -1,0 +1,87 @@
+<HTML>
+<HEAD>
+<TITLE version="1.0">Solar create by krish</TITLE>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="./origin.css">
+<link rel="icon" href="./fav-icon/logo.png">
+</HEAD>
+<STYLE href="./origin.css">
+</STYLE>
+<BODY>
+<FORM>
+    <div class="console">
+        <div class="workspace" id="creatbox">
+            <div id="star" title="This is your star"><span id="core"></span><div id="planet"></div></div>
+            <span id="startbox">
+                <center><img src="./fav-icon/logo.png" id="startlogo"></center>
+                <h3>SIMPLE SOLAR SIMULATOR</h3>
+                <p>Please enter the important date to start the simulator</p>
+            </span>
+        </div>
+        <div class="workspace" id="commandbox">
+            <div class="nav">
+                Console pannel >>
+                <div id="play" class="btn" onclick="playgame();"title="Lunch your star in empty space">play</div>
+                <div id="reload" class="btn" onclick="reloadgame();"title="Emergency reload">Reload</div>
+            </div>
+            <div class="opbox">
+                <div id="data">
+                    <table>
+                        <th>important quary</th>
+                        <tr><td>
+                            <input type="text" placeholder="Name of your star" id="name"/>
+                        </td></tr>
+                        <tr><td>
+                            <input type="number" placeholder="Mass of your star(kg)" id="strmass">
+                        </td></tr>
+                        <tr><td>
+                            <select id="strcolor">
+                                <option>Color of your star</option>
+                                <option>Yellow</option>
+                                <option>Orange</option>
+                                <option>Red</option>
+                                <option>Green</option>
+                                <option>Blue</option>
+                                <option>White</option>
+                            </select>
+                        </td></tr>
+                        <tr><td>
+                            <select id="stratmo">
+                                <option>Type of atmosphere</option>
+                                <option>Middium</option>
+                                <option>Huge</option>
+                                <option>Low</option>
+                            </select>
+                        </td></tr>
+                        <tr><td>
+                            <input type="number" placeholder="Size of your star(km)" id="strsize">
+                        </td></tr>
+                    </table>
+                </div>
+                <div id="opbtn">
+                    <table>
+                        <th>Research data</th>
+                        <tr><td>
+                            <span class="ophead">Alert: </span><br>
+                            <div id="alertbox" aria-readonly="true"></div>
+                        </td></tr>
+                        <tr><td>
+                            <span class="ophead">Research: </span><br>
+                            <div id="resdiv" aria-readonly="true"></div>
+                        </td></tr>
+                    </table>
+                    <div id="emergency">
+                        <div id="copybtn" class="btn eme" onclick="copyTxt();"title="Copy the data for future use">Copy</div>
+                        <div id="cencelbtn" class="btn eme" onclick="reset();"title="Reset the game">Reset</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</FORM>
+<audio id="mymusic" autoplay="autoplay"src="./btneffect.ogg"></audio>
+</BODY>
+<SCRIPT src="./hex.js"></SCRIPT>
+<SCRIPT src="./activate.js"></SCRIPT>
+</HTML>

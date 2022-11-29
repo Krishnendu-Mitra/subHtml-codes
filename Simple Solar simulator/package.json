@@ -1,0 +1,25 @@
+{
+    "name": "Simple Solar simulator",
+    "author": "Krishnendu Mitra",
+    "version": "0.1.0",
+    "public": true,
+    "browserslist": {
+        "production": [
+          ">0.2%",
+          "not dead",
+          "not op_mini all"
+        ],
+        "development": [
+          "last 1 chrome version",
+          "last 1 firefox version",
+          "last 1 safari version"
+        ]
+      },
+      "recover": {
+        "recover-css": ["https://github.com/Krishnend-Mitra/subHtml-Codes/Simple Solar simulator/origin.css"],
+        "recover-js": [
+          "https://github.com/Krishnend-Mitra/subHtml-Codes/Simple Solar simulator/hex.js",
+          "https://github.com/Krishnend-Mitra/subHtml-Codes/Simple Solar simulator/activate.js"
+        ]
+      }
+}
