@@ -21,9 +21,6 @@ function send(){
 	var arr = [name, gname, rwg, phone, email, pin, country];
     var list = [institute, course, leqd, tom, oT, matrix, cmb, ins, wDu, agree];
     var tuple = [arr,list];
-	//console.log(arr);
-	//console.log(list);
-	//alert("Congratulations your data submitted successfully");
 	
 	prebtn = document.getElementById("preview");
     prebtn.style.display = "block";
