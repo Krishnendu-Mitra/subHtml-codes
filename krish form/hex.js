@@ -72,3 +72,6 @@ function user(){
 	back();
 	next();
 }
+function reload(){
+	window.location.reload();
+}

@@ -100,14 +100,20 @@ h4{
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-   align-content: center;
-   margin-top: 20px;
+    align-content: center;
+    margin-top: 20px;
 }
 #preview{
 	display: none;
 }
 .alt{
 	display: none;
+	z-index: 99;
+	background-size: cover;
+	background: transparent;
+	width: auto;
+	height: 100%;
+	margin-left: 30%;
 }
 #newhead{
 	text-align: center;
@@ -130,11 +136,30 @@ h4{
 	border-radius: 5px;
 	border: 1px solid #1EA800;
 }
+#err-reload{
+	color: #fff;
+	background: #0c8ff8;
+	margin: 10px 20%;
+	width: 150px;
+	height: 30px;
+	border-radius: 2px;
+	border: 1px solid #0c8ef8e1;
+	cursor: pointer;
+}
 </style>
 <style>
 @media screen and (min-width:900px){
-.box,#access,#previewbox{
+body{
+	background: #fff;
+}
+.box,.btn,.err-bo{
 	display: none;
+}
+#box,#access,#previewbox,table{
+	display: none;
+	width: 0%;
+	height: 0%;
+	color: transparent;
 }
 .alt{
 	display: block;
@@ -150,9 +175,9 @@ h4{
 </div>
 <form><!-- action="action.php" method="get"-->
 	<div id="box" title="fill the form">
-		<h2 style="color: #0c8ff8;">Student Data Collecter</h2>
+		<h2 class="err-bo"style="color: #0c8ff8;">Student Data Collecter</h2>
 		<table style="margin-top: -150px;">
-			<h4>Personal details</h4><br>
+			<h4 class="err-bo">Personal details</h4><br>
 			<tr>
 				<td>
 					Name: <o>*</o>
@@ -213,7 +238,7 @@ h4{
 			</tr><br>
 		</table>
 		<table style="margin-top: -140px;">
-			<h4>Contact details</h4><br>
+			<h4 class="err-bo">Contact details</h4><br>
 			<tr>
 				<td>
 					Phone number: <o>*</o>
@@ -272,7 +297,7 @@ h4{
 			</tr><br>
 		</table>
 		<table style="margin-top: -180px;">
-			<h4>Qualification details</h4><br>
+			<h4 class="err-bo">Qualification details</h4><br>
 			<tr>
 				<td>
 					Present institute name: <o>*</o>
@@ -347,7 +372,7 @@ h4{
 			</tr><br>
 		</table>
 		<table style="margin-top: -40px;">
-			<h4>Job details</h4>
+			<h4 class="err-bo">Job details</h4>
 			<tr>
 				<td>
 					Internet speed: <o>*</o>
@@ -392,7 +417,7 @@ h4{
 				</td>
 			</tr>
 		</table><br>
-		<input type="checkbox" id="agree" required> I agree all terms and conditions, for view terms and conditions <a href="https://youtube.com">click here</a> and check out this from again.
+		<input type="checkbox" class="err-bo" id="agree" required> I agree all terms and conditions, for view terms and conditions <a href="https://youtube.com"class="err-bo">click here</a> and check out this from again.
 		<br>
 		<div class="btn-holder">
 			<input type="reset" id="reset" class="btn" value="Clear"/>
@@ -405,11 +430,12 @@ h4{
 </form>
 <div class="alt">
 	<h1>Error: 505</h1>
-	<h2>Oops! the device size is so huge, please open it in your mobile</h2>
+	<h2>Oops! this device size is so huge, please open it in your mobile</h2>
 	<h3>error fixed options: </h3>
 	<a href="https://github.com/Krishnendu-Mitra">https://form.google.com/form-krish-lib/student_form/e8ff2ga7o9bwdh50ksba/error-fiexd/help.git</a>
     <h4>Check internet cable or router antina and refresh</h4>
-    <a href="https://8.8.8.8">find another way</a>
+    <a href="https://8.8.8.8">find another way</a><br>
+	<button id="err-reload"onclick="reload();">Reload</button>
 </div>
 <div id="previewbox"></div>
 <div id="datasave"style="display:none;"></div>
