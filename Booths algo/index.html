@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title version="1.0">Multiplication by booths algo</title>
+    <link rel="stylesheet" href="./origin.css">
+    <!--link rel="icon" href="https://avatars.githubusercontent.com/u/111632830?v=4"-->
+</head>
+<body>
+<form>
+    <section>
+        <h1>Multiplication using Booths algorithm</h1>
+        <div class="workshope">
+            <div class="flt">
+                <span class="name">Multiplicand: </span>
+                <input type="number"id="multi"placeholder="Write here..."/>
+                <span class="name">Multipler: </span>
+                <input type="number"id="qa"placeholder="Write here..."/>
+            </div>
+            <div class="flt">
+                <span class="name">Registance: </span>
+                <input type="number"id="reg"placeholder="Write here..."/>
+                <span class="name">Code: </span>
+                <input type="number"id="code"placeholder="Write here..."/>
+            </div>
+            <div class="btn" onclick="calculation();"title="send your calculateble data in data server">Send</div>
+        </div>
+        <div class="product"id="ans">
+            <div class="flt">
+                <span class="name">A.C.: </span>
+                <div id="acbox" aria-readonly="true"></div>
+                <span class="name">Q: </span>
+                <div id="qbox" aria-readonly="true"></div>
+                <span class="name">Main Answer in Binary: </span>
+                <div id="ansbin" aria-readonly="true"></div>
+                <span class="name">Main Answer in Decimal: </span>
+                <div id="ansdec" aria-readonly="true"></div>
+            </div>
+        </div>
+    </section>
+</form>
+</body>
+<script src="./hex.js">
+</script>
+</html>
